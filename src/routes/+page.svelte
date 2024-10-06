@@ -1,65 +1,21 @@
 <script>
 	let title = "Welcome to My Simple Home Page!";
-	let description = "This is a simple homepage built with Svelte. Enjoy your stay!";
+	let description = "This is a simple homepage built with Svelte and Tailwind CSS. Enjoy your stay!";
   </script>
   
-  <main class="container">
-	<h1>{title}</h1>
-	<p>{description}</p>
+  <main class="container mx-auto px-4 py-8">
+	<h1 class="text-4xl font-bold text-gray-800 text-center mb-4">{title}</h1>
+	<p class="text-xl text-gray-600 text-center">{description}</p>
   
-	<section class="intro">
-	  <img src="/assets/home.jpg" alt="Home Image" />
-	  <div class="content">
-		<h2>About This Site</h2>
-		<p>This is a sample homepage where you can share some brief information about yourself or your project.</p>
+	<section class="intro flex items-center justify-between mt-8">
+	  <div class="content pl-8">
+		<h2 class="text-2xl font-semibold text-gray-700">About This Site</h2>
+		<p class="mt-2 text-gray-600">This is a sample homepage where you can share some brief information about yourself or your project.</p>
 	  </div>
 	</section>
   
-	<footer>
-	  <p>Created with ❤️ using Svelte</p>
+	<footer class="text-center mt-12">
+	  <p class="text-gray-500">Created with ❤️ using Svelte and Tailwind CSS</p>
 	</footer>
   </main>
-  
-  <style>
-	.container {
-	  max-width: 960px;
-	  margin: 0 auto;
-	  padding: 2rem;
-	  font-family: Arial, sans-serif;
-	}
-  
-	h1 {
-	  font-size: 2.5rem;
-	  color: #2c3e50;
-	  text-align: center;
-	  margin-bottom: 1rem;
-	}
-  
-	p {
-	  font-size: 1.25rem;
-	  color: #34495e;
-	  text-align: center;
-	}
-  
-	.intro {
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-between;
-	  margin-top: 2rem;
-	}
-  
-	.intro img {
-	  max-width: 50%;
-	  border-radius: 10px;
-	}
-  
-	.content {
-	  padding-left: 2rem;
-	}
-  
-	footer {
-	  text-align: center;
-	  margin-top: 3rem;
-	}
-  </style>
   
