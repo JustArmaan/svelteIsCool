@@ -1,59 +1,65 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
-</script>
-
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
+	let title = "Welcome to My Simple Home Page!";
+	let description = "This is a simple homepage built with Svelte. Enjoy your stay!";
+  </script>
+  
+  <main class="container">
+	<h1>{title}</h1>
+	<p>{description}</p>
+  
+	<section class="intro">
+	  <img src="/assets/home.jpg" alt="Home Image" />
+	  <div class="content">
+		<h2>About This Site</h2>
+		<p>This is a sample homepage where you can share some brief information about yourself or your project.</p>
+	  </div>
+	</section>
+  
+	<footer>
+	  <p>Created with ❤️ using Svelte</p>
+	</footer>
+  </main>
+  
+  <style>
+	.container {
+	  max-width: 960px;
+	  margin: 0 auto;
+	  padding: 2rem;
+	  font-family: Arial, sans-serif;
 	}
-
+  
 	h1 {
-		width: 100%;
+	  font-size: 2.5rem;
+	  color: #2c3e50;
+	  text-align: center;
+	  margin-bottom: 1rem;
 	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+  
+	p {
+	  font-size: 1.25rem;
+	  color: #34495e;
+	  text-align: center;
 	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+  
+	.intro {
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  margin-top: 2rem;
 	}
-</style>
+  
+	.intro img {
+	  max-width: 50%;
+	  border-radius: 10px;
+	}
+  
+	.content {
+	  padding-left: 2rem;
+	}
+  
+	footer {
+	  text-align: center;
+	  margin-top: 3rem;
+	}
+  </style>
+  
